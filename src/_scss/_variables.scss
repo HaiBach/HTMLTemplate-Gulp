@@ -1,0 +1,13 @@
+// Fonts
+$font-jp: 'Noto Sans JP', sans-serif;
+// $font-jp: 'Hiragino Kaku Gothic ProN', 'ヒラギノ角ゴ ProN W3', Meiryo, メイリオ, Osaka, 'MS Gothic', arial, helvetica, sans-serif;
+$font-en: 'Anton', sans-serif;
+
+// Colors
+$color-primary: #231815;
+$color-alter: #B1A890;
+
+// Mixins
+@mixin font-size($size) {
+  font-size: #{$size / 16}rem;
+}

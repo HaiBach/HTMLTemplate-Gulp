@@ -1,0 +1,291 @@
+.form {
+    overflow: hidden;
+    padding-left: 20px;
+    padding-right: 20px;
+    margin-bottom: 200px;
+    label {
+      @include font-size(20);    
+    }
+    input[type="text"],
+    input[type="password"],
+    input[type="number"],
+    input[type="email"],
+    input[type="tel"],
+    input[type="search"],
+    input[type="date"],
+    input[type="url"],
+    textarea {
+      appearance: none;
+      display: block;
+      width: 100%;
+      line-height: 48px;
+      height: 48px;
+      padding: 0 18px;
+      margin: 0 0 20px;
+      border-radius: 0;
+      border: 1px solid #BFBFBF;
+      background-color: #fff;
+      @include font-size(20);
+      outline: none;
+      transition: all .2s;
+      &::placeholder {
+        color: #BFBFBF;
+      }
+      &:focus {
+        border-radius: 2px;
+        border-color: $color-primary;
+        box-shadow: 0 0 0 6px rgba($color: $color-primary, $alpha: .25);
+        outline: 0;
+      }
+    }
+    textarea {
+      padding: 10px 18px;
+      min-height: 250px;
+      line-height: 1.5;
+    }
+    input[type="submit"], button[type="submit"],
+    input[type="reset"], button[type="reset"] {
+      appearance: none;
+      padding: 5px 20px;
+      border-radius: 0;
+      border: 1px solid #BFBFBF;
+      background-color: #fff;
+      color: $color-primary;
+      @include font-size(20);
+      line-height: 1;
+      transition: all .2s;
+      &:hover {
+        border-color: $color-primary;
+        background-color: $color-primary;
+        color: #fff;
+      }
+    }
+    input[type="checkbox"] {
+      position: absolute;
+      left: 0;
+      top: 0;
+      width: 0;
+      height: 0;
+      visibility: hidden;
+      & + label {
+        position: relative;
+        padding-left: 22px;
+        &::before {
+          content: '';
+          position: absolute;
+          left: 0;
+          top: 8px;
+          width: 16px;
+          height: 16px;
+          border: 1px solid $color-primary;
+          background-color: #fff;
+        }
+        &::after {
+          content: '';
+          position: absolute;
+          left: 3px;
+          top: 11px;
+          width: 10px;
+          height: 10px;
+          background-color: $color-primary;
+          transition: all .15s;
+          transform: rotate(-90deg) scale(.5);
+          opacity: 0;
+        }
+      }
+      &:checked + label {
+        &::after {
+          opacity: 1;
+          transform: rotate(0) scale(1);
+        }
+      }
+    }
+    input[type="radio"] {
+      position: absolute;
+      left: 0;
+      top: 0;
+      width: 0;
+      height: 0;
+      visibility: hidden;
+      & + label {
+        position: relative;
+        padding-left: 22px;
+        &::before {
+          content: '';
+          position: absolute;
+          left: 0;
+          top: 7px;
+          width: 18px;
+          height: 18px;
+          border-radius: 100px;
+          border: 1px solid #BFBFBF;
+          background-color: #fff;
+        }
+        &::after {
+          content: '';
+          position: absolute;
+          left: 3px;
+          top: 10px;
+          width: 12px;
+          height: 12px;
+          border-radius: 100px;
+          background-color: $color-primary;
+          transition: all .15s;
+          transform: scale(.1);
+          opacity: 0;
+        }
+      }
+      &:checked + label {
+        &::before {
+          border-color: $color-primary;
+        }
+        &::after {
+          opacity: 1;
+          transform: scale(1);
+        }
+      }
+    }
+    &__checkbox {
+      display: block;
+      padding-left: 15px;
+      margin: 10px 0 20px;
+      li {
+        margin-bottom: 5px;
+        list-style-type: none;
+      }
+    }
+    &__radio {
+      display: flex;
+      padding-left: 15px;
+      margin: 0 -30px;
+      li {
+        list-style-type: none;
+        margin: 10px 30px;
+      }
+    }
+  
+  
+    &__group {
+      position: relative;
+      margin-bottom: 55px;
+    }
+    &__name {
+      h5 {
+        @include font-size(22);
+        font-weight: 700;
+      }
+    }
+  
+    @media (min-width: 1200px) {
+    }
+    @media (min-width: 1400px) {
+    }
+    
+    @media (max-width: 991px) {
+      padding-left: 10px;
+      padding-right: 10px;
+      label {
+        @include font-size(16);
+      }
+      input[type="text"],
+      input[type="password"],
+      input[type="number"],
+      input[type="email"],
+      input[type="tel"],
+      input[type="search"],
+      input[type="date"],
+      input[type="url"],
+      textarea {
+        @include font-size(16);
+      }
+      input[type="checkbox"] {
+        & + label {
+          &::before {
+            top: 6px;
+          }
+          &::after {
+            top: 9px;
+          }
+        }
+      }
+      input[type="radio"] {
+        & + label {
+          &::before {
+            top: 5px;
+          }
+          &::after {
+            top: 8px;
+          }
+        }
+      }
+      input[type="submit"], button[type="submit"],
+      input[type="reset"], button[type="reset"] {
+        padding: 7px 30px;
+        @include font-size(16);
+      }
+      &__checkbox li {
+        margin-bottom: 10px;
+      }
+      &__name {
+        h5 {
+          @include font-size(18);
+        }
+      }
+    }
+    @media (max-width: 767px) {
+      
+    }
+    @media (max-width: 565px) {
+      margin-bottom: 150px;
+      label {
+        @include font-size(14);
+        // line-height: 2;
+      }
+      input[type="text"],
+      input[type="password"],
+      input[type="number"],
+      input[type="email"],
+      input[type="tel"],
+      input[type="search"],
+      input[type="date"],
+      input[type="url"],
+      textarea {
+        height: 42px;
+        line-height: 42px;
+        padding-left: 14px;
+        padding-right: 14px;
+        @include font-size(14);
+      }
+      textarea {
+        line-height: 1.6;
+      }
+      input[type="checkbox"] {
+        & + label {
+          &::before {
+            top: 3px;
+          }
+          &::after {
+            top: 6px;
+          }
+        }
+      }
+      input[type="radio"] {
+        & + label {
+          &::before {
+            top: 3px;
+          }
+          &::after {
+            top: 6px;
+          }
+        }
+      }
+      &__group {
+        margin-bottom: 40px;
+      }
+      &__name {
+        h5 {
+          @include font-size(16);
+        }
+      }
+    } 
+  }

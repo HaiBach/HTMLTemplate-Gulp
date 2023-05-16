@@ -1,0 +1,152 @@
+body {
+    font-family: $font-jp;
+    color: $color-primary;
+  }
+  
+  @media (min-width: 1200px) {
+    .container-xl, .container-lg, .container-md, .container-sm, .container {
+      // max-width: 1140px;
+      max-width: calc(1080px + 24px);
+    }
+  }
+  @media (min-width: 1400px) {
+    .container-xxl, .container-xl, .container-lg, .container-md, .container-sm, .container {
+      // max-width: 1320px;
+      max-width: calc(1080px + 24px);
+    }
+  }
+  @media (max-width: 991px) {
+    body {
+      font-size: 14px;
+    }
+  }
+  
+  /** PC - SP **/
+  .none {
+    display: none;
+  }
+  [class*="display-"] {
+    // display: none;
+  }
+  .display {
+    &-min-sm {
+      display: inherit;
+    }
+    &-max-sm {
+      display: none;
+    }
+    @media (min-width: 1200px) {
+    }
+    @media (min-width: 1400px) {
+    }
+    
+    @media (max-width: 991px) {
+      &-min-sm {
+        display: inherit;
+      }
+    }
+    @media (max-width: 767px) {
+      &-min-sm {
+        display: none;
+      }
+      &-max-sm {
+        display: inherit;
+      }
+    }
+    @media (max-width: 565px) {
+    }
+  }
+  
+  /** BR **/
+  [class*="br-"] {
+    display: none;
+  }
+  .br {
+    // lg
+    &-min-sm, &-min-md, &-min-lg {
+      display: inline;
+    }
+    &-max-sm, &-max-md {
+      display: none;
+    }
+    &-max-lg {
+      display: inline;
+    }
+    // xl
+    @media (min-width: 1200px) {
+      &-max-lg {
+        display: none;
+      }
+    }
+    // xxl
+    @media (min-width: 1400px) {
+    }
+  
+    // md
+    @media (max-width: 991px) {
+      &-md {
+        display: inline;
+      }
+      &-min-lg {
+        display: none;
+      }
+      &-max-md {
+        display: inline;
+      }
+    }
+    // sm
+    @media (max-width: 767px) {
+      &-md {
+        display: none;
+      }
+      &-sm {
+        display: inline;
+      }
+      &-min-md {
+        display: none;
+      }
+      &-max-sm {
+        display: inline;
+      }
+    }
+    // xs
+    @media (max-width: 565px) {
+      &-xs {
+        display: inline;
+      }
+      &-min-sm, &-min-md {
+        display: none;
+      }
+    }
+  }
+  
+  /** TEXT **/
+  .line-through {
+    text-decoration: line-through !important;
+  }
+  
+  
+  
+  
+  
+  /** RUBY SLIDER **/
+  .rs01 {
+    a.rs01imgback {
+      visibility: hidden;
+    }
+  }
+  
+  
+  
+  
+  
+  /** SEO h1 **/
+  .seo-h1 {
+    display: absolute;
+    left: 0;
+    top: 0;
+    opacity: 0;
+    width: 0;
+    height: 0;
+    opacity: 0;
+  }

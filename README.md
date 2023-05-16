@@ -18,6 +18,9 @@ This project using Gulp to automate and compiled code.
 ## COMMANDS / DÒNG LỆNH
 
 ``` bash
+# first, install node package
+$ npm -i
+
 # Default build with Gulp
 $ gulp
 ```

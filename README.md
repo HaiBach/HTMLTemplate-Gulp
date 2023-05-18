@@ -20,6 +20,8 @@ This project using Gulp to automate and compiled code.
 ``` bash
 # first, install node package
 $ npm -i
+# Install gulp cli
+$ npm -ig gulp-cli
 
 # Default build with Gulp
 $ gulp
